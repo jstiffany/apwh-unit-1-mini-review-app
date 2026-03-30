@@ -79,7 +79,7 @@ score = 0
 
 def quiz2questiononePrompt():
     global score
-    print("1. Which of the following best explains why the Indian Ocean trade network expanded more than the Silk Roads?")
+    print("\n1. Which of the following best explains why the Indian Ocean trade network expanded more than the Silk Roads?")
 
     quiz2questiononeUser = input("\nA. It had more government control\nB. It relied on faster and larger-scale transportation\nC. It focused on luxury goods\nD. It avoided cultural interactions").lower()
 
@@ -91,11 +91,20 @@ def quiz2questiononePrompt():
 
 def quiz2questiontwoPrompt():
     global score
-    print("2. What was a key role of caravanserai along the Silk Roads?")
+    print("\n2. What was a key role of caravanserai along the Silk Roads?")
 
     quiz2questiontwoUser = input("\nA. They spread Islam into West Africa\nB. They improved maritime navigation\nC. They provided safety and rest for merchants\nD. They taxed trade goods").lower()
 
     if quiz2questiontwoUser == "c":
-        print("\nCorrect. Islamic merchants")
+        print("\nCorrect. Islamic merchants needed spaces to rest during long\ntrips to the Silk Road. The caravanserai enabled this.")
+        score += 1
+
+    else:
+        print("\nIncorrect. Caravanserais provided saftey and protection for\nmerchants on their way too and from the Silk Road.")
+
+
+def quiz2questionthreePrompt():
+    global score
+    print("\n3. ")
 
 ## UNIT 3 QUESTIONS ##
