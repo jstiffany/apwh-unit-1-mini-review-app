@@ -39,7 +39,7 @@ def quiz1questionthreePrompt():
     global score
     print("\n3. The Seljuk Empire maintained power primarily through:")
 
-    quiz1questionthreeUser = input("\nA. Civil service exams\nB. Trade monopolies\nC. Military strength\nD. Democratic elections\n")
+    quiz1questionthreeUser = input("\nA. Civil service exams\nB. Trade monopolies\nC. Military strength\nD. Democratic elections\n").lower()
 
     if quiz1questionthreeUser == "c":
         print("\nCorrect. They expanded by using mobile and calvary-heavy forces.")
@@ -81,11 +81,11 @@ def quiz2questiononePrompt():
     global score
     print("\n1. Which of the following best explains why the Indian Ocean trade network expanded more than the Silk Roads?")
 
-    quiz2questiononeUser = input("\nA. It had more government control\nB. It relied on faster and larger-scale transportation\nC. It focused on luxury goods\nD. It avoided cultural interactions").lower()
+    quiz2questiononeUser = input("\nA. It had more government control\nB. It relied on faster and larger-scale transportation\nC. It focused on luxury goods\nD. It avoided cultural interactions\n").lower()
 
     if quiz2questiononeUser == "b":
         print("\nCorrect. The Indian Ocean network relied on larger-scale\ntransportation due to how large the network was.")
-        score =+ 1
+        score += 1
     else:
         print("\nIncorrect. The Indian Ocean network relied on faster and\nlarger-scaled transportation due to the networks size.")
 
@@ -93,7 +93,7 @@ def quiz2questiontwoPrompt():
     global score
     print("\n2. What was a key role of caravanserai along the Silk Roads?")
 
-    quiz2questiontwoUser = input("\nA. They spread Islam into West Africa\nB. They improved maritime navigation\nC. They provided safety and rest for merchants\nD. They taxed trade goods").lower()
+    quiz2questiontwoUser = input("\nA. They spread Islam into West Africa\nB. They improved maritime navigation\nC. They provided safety and rest for merchants\nD. They taxed trade goods\n").lower()
 
     if quiz2questiontwoUser == "c":
         print("\nCorrect. Islamic merchants needed spaces to rest during long\ntrips to the Silk Road. The caravanserai enabled this.")
@@ -107,4 +107,30 @@ def quiz2questionthreePrompt():
     global score
     print("\n3. ")
 
+unit2quizorder = [quiz2questiononePrompt, quiz2questiontwoPrompt, quiz2questionthreePrompt]
+
 ## UNIT 3 QUESTIONS ##
+
+## BEGIN ##
+
+while True:
+    score = 0
+    quizOption = input("Which quiz would you like to begin?(1, 2, or 3) ")
+
+    if quizOption == "1":
+        for order in unit1quizOrder:
+            order()
+        print(f"\nYour final score was a total of: {score}/5.")
+
+    elif quizOption == "2":
+        for order in unit2quizorder:
+            order()
+        print(f"\nYour final score was a total of: {score}/5.")
+
+    elif quizOption == "3":
+        for order in unit3quizorder:
+            order()
+        print(f"\nYour score was a total of: {score}/5.")
+
+    else:
+        print("\nPlease select 1, 2, or 3.")
