@@ -1,7 +1,7 @@
 ## TITLE & INTRO ##
 
 print("-- AP WORLD HISTORY --")
-print("UNIT 1-3 PRACTICE TEST\n")
+print("UNIT 1-2 PRACTICE TEST\n")
 print("This practice test has 5 questions\nand the answers will be shown\nthroughout the quiz.")
 print('Before you begin, answer the questions as A/a, B/b, C/c, D/c.\n EX. "A"')
 
@@ -13,7 +13,7 @@ score = 0
 
 def quiz1questiononePrompt():
     global score
-    print("\n1. What was the main reason for the\nSong Dynasty’s population growth?\n")
+    print("\n1. What was the main reason for the\nSong Dynasty’s population growth?")
 
     quiz1questiononeUser = input("\nA. Expansion of territory\nB. Champa rice\nC. Industrialization\nD. Religious reforms\n").lower()
 
@@ -102,20 +102,52 @@ def quiz2questiontwoPrompt():
     else:
         print("\nIncorrect. Caravanserais provided saftey and protection for\nmerchants on their way too and from the Silk Road.")
 
-
 def quiz2questionthreePrompt():
     global score
-    print("\n3. ")
+    print("\n3. Which of the following was a major effect of the Mongol Empire on trade?")
 
-unit2quizorder = [quiz2questiononePrompt, quiz2questiontwoPrompt, quiz2questionthreePrompt]
+    quiz2questionthreeUser = input("\nA. Decreased trade due to warfare\nB. Isolation of regions\nC. Increased safety and connectivity across Eurasia\nD. Elimination of cultural diffusion\n").lower()
 
-## UNIT 3 QUESTIONS ##
+    if quiz2questionthreeUser == "c":
+        print("\nCorrect. The Mongol Empires size was big enough to ensure saftey\nwhen it came to traveling.")
+        score += 1
+
+    else:
+        print("\nIncorrect. The Mongol Empire increased saftey and\nconnectivity across Eurasia.")
+
+def quiz2questionfourPrompt():
+    global score
+    print("\n4. Which of the following best describes diasporic communities?")
+
+    quiz2questionfourUser = input("\nA. Military groups protecting trade routes\nB. Merchants settling in foreign regions\nC. Government officials collecting taxes\nD. Farmers migrating for agriculture\n").lower()
+
+    if quiz2questionfourUser == "b":
+        print("\nCorrect. Merchants traveled into foreign regions for\nmore trade.")
+        score += 1
+
+    else:
+        print("\nIncorrect. Merchants settled into foreign regions.")
+
+def quiz2questionfivePrompt():
+    global score
+    print("\n5. The wealth of the Mali Empire was primarily based on:")
+
+    quiz2questionfiveUser = input("\nA. Silk production\nB. Maritime trade\nC. Gold and taxation of trade\nD. Industrial manufacturing\n").lower()
+
+    if quiz2questionfiveUser == "c":
+        print("\nCorrect. The Mali Empire used gold and taxation to expand their empire.")
+        score += 1
+
+    else:
+        print("\nIncorrect. The Mali Empire used gold and taxation to expand their empire.")
+
+unit2quizorder = [quiz2questiononePrompt, quiz2questiontwoPrompt, quiz2questionthreePrompt, quiz2questionfourPrompt, quiz2questionfivePrompt]
 
 ## BEGIN ##
 
 while True:
     score = 0
-    quizOption = input("Which quiz would you like to begin?(1, 2, or 3) ")
+    quizOption = input("Which quiz would you like to begin?(1 or 2) ")
 
     if quizOption == "1":
         for order in unit1quizOrder:
@@ -126,11 +158,6 @@ while True:
         for order in unit2quizorder:
             order()
         print(f"\nYour final score was a total of: {score}/5.")
-
-    elif quizOption == "3":
-        for order in unit3quizorder:
-            order()
-        print(f"\nYour score was a total of: {score}/5.")
 
     else:
         print("\nPlease select 1, 2, or 3.")
