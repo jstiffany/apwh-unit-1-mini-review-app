@@ -160,4 +160,4 @@ while True:
         print(f"\nYour final score was a total of: {score}/5.")
 
     else:
-        print("\nPlease select 1, 2, or 3.")
+        print("\nPlease select 1 or 2.")
